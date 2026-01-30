@@ -139,6 +139,8 @@ While it is a bit counter-intuitive to set things up before jumping into vibe-co
 <details>
   <summary>🚀 Deploying Your First LLM-powered Application with Vercel</summary>
 
+This repo has two parts: the **API** (FastAPI) and the **frontend** (Next.js). Deploying from the repo root with the default `vercel.json` only deploys the API, so your URL may show `{"status":"ok"}` instead of the Mental Coach chat page. To get the chat UI at your main URL, deploy the **frontend** as a separate Vercel project with **Root Directory** set to `frontend`, and set `NEXT_PUBLIC_API_URL` to your API project’s URL. See **[docs/VERCEL_DEPLOY.md](docs/VERCEL_DEPLOY.md)** for step-by-step instructions.
+
 1. Ensure you have signed into [Vercel](https://vercel.com/) with your GitHub account.
 
 2. Ensure you have `npm` (this may have been installed in the previous vibe-coding step!) - if you need help with that, ask Cursor!
@@ -159,7 +161,7 @@ While it is a bit counter-intuitive to set things up before jumping into vibe-co
 
      ![image](https://i.imgur.com/D1iKGCq.png)
 
-6. Once the build is completed - head to the provided link and try out your app!
+6. Once the build is completed - head to the provided link and try out your app! To show the Mental Coach UI at that link, use a second Vercel project with root directory `frontend` as in [docs/VERCEL_DEPLOY.md](docs/VERCEL_DEPLOY.md).
 
 > NOTE: Remember, if you run into any errors - ask Cursor to help you fix them!
 
