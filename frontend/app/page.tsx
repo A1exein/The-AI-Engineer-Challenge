@@ -40,7 +40,7 @@ export default function ChatPage() {
   return (
     <div className="flex flex-col min-h-screen max-w-3xl mx-auto px-4 py-6">
       <header className="text-center mb-6">
-        <h1 className="text-2xl font-semibold text-white">Mental Coach</h1>
+        <h1 className="text-2xl font-semibold text-text">Mental Coach</h1>
         <p className="text-muted text-sm mt-1">A supportive AI coach — share what’s on your mind.</p>
       </header>
 
@@ -77,7 +77,7 @@ export default function ChatPage() {
       </div>
 
       {error && (
-        <div className="mb-3 px-4 py-2 rounded-lg bg-red-900/40 text-red-200 text-sm" role="alert">
+        <div className="mb-3 px-4 py-2 rounded-lg bg-red-100 text-red-800 text-sm" role="alert">
           {error}
         </div>
       )}

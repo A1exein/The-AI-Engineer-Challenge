@@ -171,3 +171,4 @@ frontend/out/
 frontend/.env.local
 # Allow frontend source lib (root lib/ is for Python)
 !frontend/lib/
+.env*.local
