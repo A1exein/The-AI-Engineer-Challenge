@@ -1,9 +1,10 @@
 /**
  * Client for the mental coach chat API.
  * Uses NEXT_PUBLIC_API_URL (e.g. http://localhost:8000) so it works locally and on Vercel.
+ * Base URL is normalized (no trailing slash) to avoid double slashes that cause redirects and CORS preflight failures.
  */
+const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/+$/, "");
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 export type ChatResponse = { reply: string };
 

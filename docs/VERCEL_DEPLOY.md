@@ -31,7 +31,7 @@ Use two projects from the same GitHub repo: one for the API, one for the fronten
 1. Create a **new project** from the same repo (or duplicate the existing one and change its root).
 2. In **Settings → General**, set **Root Directory** to `frontend`. Apply.
 3. In **Settings → Environment Variables**, add:
-   - `NEXT_PUBLIC_API_URL` = `https://<your-api-project>.vercel.app`
+   - `NEXT_PUBLIC_API_URL` = `https://<your-api-project>.vercel.app` **(no trailing slash—a trailing slash causes a CORS error when chatting)**
    - (Optional) Add `OPENAI_API_KEY` here too if you want to use the same key; the frontend does not use it, only the API project does.)
 4. Redeploy the frontend project.
 
