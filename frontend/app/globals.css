@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #1a1a2e;
+  --card: #16213e;
+  --accent: #0f3460;
+  --highlight: #e94560;
+  --text: #eaeaea;
+  --muted: #a0a0a0;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Message bubbles grow to fit content */
+.message-bubble {
+  max-width: min(85vw, 36rem);
+  word-wrap: break-word;
+}
