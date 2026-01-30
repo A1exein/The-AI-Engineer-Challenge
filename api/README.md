@@ -48,6 +48,18 @@ If you encounter an "Address already in use" error, you may need to kill existin
 lsof -ti:8000 | xargs kill -9
 ```
 
+## Deploying on Vercel
+
+When the API is deployed on Vercel, you **must** set the `OPENAI_API_KEY` environment variable in the project, or the app will fail to load and chat will not work.
+
+1. In the [Vercel dashboard](https://vercel.com/dashboard), open your project.
+2. Go to **Settings** → **Environment Variables**.
+3. Add a variable: **Name** `OPENAI_API_KEY`, **Value** your OpenAI API key (e.g. `sk-...`).
+4. Choose the environments (Production, Preview, Development) where it should apply and save.
+5. Redeploy the project so the new variable is picked up.
+
+Without this variable, the serverless function will not initialize the OpenAI client and chat requests will return an error.
+
 ## API Endpoints
 
 ### Chat Endpoint
